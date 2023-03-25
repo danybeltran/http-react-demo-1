@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Post */
+
+.posts-container {
+  @apply py-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 rounded-md;
+}
+
+.post {
+  @apply card p-4 relative break-words rounded-lg hover:border-neutral-400 card-bordered m-4;
+}
+
+.post-delete-button {
+  @apply btn btn-ghost font-semibold absolute top-1 right-1 cursor-pointer;
+  transition: 0.12s;
+}
+
+/* Add post */
+
+.post-form {
+  @apply flex flex-wrap w-full md:w-96 items-center justify-center space-y-2;
+}
+
+.post-title-input {
+  @apply textarea textarea-bordered h-32 resize-none w-full;
+}

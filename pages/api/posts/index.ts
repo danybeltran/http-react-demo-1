@@ -29,7 +29,9 @@ const postsHandler = Validate({
     const { id } = req.query
     try {
       const deletedPost = await Post.findByIdAndDelete(id)
-      res.send(deletedPost)
+      setTimeout(() => {
+        res.send(deletedPost)
+      }, 3000)
     } catch (err) {
       res.status(500).send({
         error: 'Failed to remove post'

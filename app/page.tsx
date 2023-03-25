@@ -1,4 +1,8 @@
+'use client'
+import useFetch from 'http-react'
+
 import Link from 'next/link'
+
 import Header from 'components/Header'
 
 export default function Home() {
